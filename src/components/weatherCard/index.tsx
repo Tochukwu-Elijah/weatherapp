@@ -17,7 +17,7 @@ const WeatherCard = (props: { weatherData: WeatherData }) => {
             await dispatch(deleteWeatherData(weatherData.resolvedAddress));
         } catch (error) {
             console.error(
-                "An error occurred while deleting weather data:",
+                "An error has occurred while deleting weather data:",
                 error
             );
         }
