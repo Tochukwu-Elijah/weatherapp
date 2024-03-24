@@ -16,6 +16,7 @@ const customTheme = extendTheme({
         }),
     },
 });
+
 function App() {
     return (
         <Provider store={store}>
