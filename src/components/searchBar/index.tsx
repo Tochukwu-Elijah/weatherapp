@@ -16,20 +16,17 @@ const SearchBar = () => {
         //@ts-ignore
         dispatch(selectWeatherData(weatherData));
     };
-
     const handleInputChange = (event: {
         target: { value: SetStateAction<string> };
     }) => {
         setCityName(event.target.value);
     };
-
     const handleInputKeyPress = async (event: { key: string }) => {
         if (event.key === "Enter") {
             const fetchedData = await dispatch(fetchWeatherCity(cityName));
             updateSelectedData(fetchedData.payload);
         }
     };
-
     useEffect(() => {
         if (selectedData) {
             updateSelectedData(selectedData);
